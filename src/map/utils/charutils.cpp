@@ -107,8 +107,8 @@ along with this program.  If not, see http://www.gnu.org/licenses/
  ************************************************************************/
 
 // Number of rows in the exp table
-static constexpr int32                               ExpTableRowCount = 60;
-std::array<std::array<uint16, 20>, ExpTableRowCount> g_ExpTable;
+static constexpr int32                               ExpTableRowCount = 123;
+std::array<std::array<uint16, 99>, ExpTableRowCount> g_ExpTable;
 std::array<uint16, 100>                              g_ExpPerLevel;
 
 /************************************************************************
@@ -3194,7 +3194,7 @@ namespace charutils
 
     void LoadExpTable()
     {
-        const char* fmtQuery = "SELECT r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20 "
+        const char* fmtQuery = "SELECT r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,r21,r22,r23,r24,r25,r26,r27,r28,r29,r30,r31,r32,r33,r34,r35,r36,r37,r38,r39,r40,r41,r42,r43,r44,r45,r46,r47,r48,r49,r50,r51,r52,r53,r54,r55,r56,r57,r58,r59,r60,r61,r62,r63,r64,r65,r66,r67,r68,r69,r70,r71,r72,r73,r74,r75,r76,r77,r78,r79,r80,r81,r82,r83,r84,r85,r86,r87,r88,r89,r90,r91,r92,r93,r94,r95,r96,r97,r98,r99 "
                                "FROM exp_table "
                                "ORDER BY level ASC "
                                "LIMIT %u";
@@ -3205,7 +3205,7 @@ namespace charutils
         {
             for (uint32 x = 0; x < ExpTableRowCount && Sql_NextRow(SqlHandle) == SQL_SUCCESS; ++x)
             {
-                for (uint32 y = 0; y < 20; ++y)
+                for (uint32 y = 0; y < 99; ++y)
                 {
                     g_ExpTable[x][y] = (uint16)Sql_GetIntData(SqlHandle, y);
                 }
@@ -3309,11 +3309,11 @@ namespace charutils
 
     uint32 GetRealExp(uint8 charlvl, uint8 moblvl)
     {
-        const int32 levelDif = moblvl - charlvl + 44;
+        const int32 levelDif = moblvl - charlvl + 98;
 
         if ((charlvl > 0) && (charlvl < 100))
         {
-            return g_ExpTable[std::clamp(levelDif, 0, ExpTableRowCount - 1)][(charlvl - 1) / 5];
+            return g_ExpTable[std::clamp(levelDif, 0, ExpTableRowCount - 1)][(charlvl - 1)];
         }
 
         return 0;

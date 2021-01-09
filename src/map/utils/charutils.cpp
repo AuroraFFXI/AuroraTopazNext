@@ -3235,6 +3235,38 @@ namespace charutils
      ************************************************************************/
     EMobDifficulty CheckMob(uint8 charlvl, uint8 moblvl)
     {
+        const int32 mobLevelDif = moblvl - charlvl;
+
+        if (mobLevelDif >= 9)
+        {
+            return EMobDifficulty::IncrediblyTough;
+        }
+        if (mobLevelDif >= 5)
+        {
+            return EMobDifficulty::VeryTough;
+        }
+        if (mobLevelDif >= 1)
+        {
+            return EMobDifficulty::Tough;
+        }
+        if (mobLevelDif >= 0)
+        {
+            return EMobDifficulty::EvenMatch;
+        }
+        if (mobLevelDif >= -3)
+        {
+            return EMobDifficulty::DecentChallenge;
+        }
+        if (mobLevelDif >= -10)
+        {
+            return EMobDifficulty::EasyPrey;
+        }
+        if (mobLevelDif >= -19)
+        {
+            return EMobDifficulty::IncrediblyEasyPrey;
+        }
+
+        /*
         uint32 baseExp = GetRealExp(charlvl, moblvl);
 
         if (baseExp >= 400)
@@ -3265,7 +3297,7 @@ namespace charutils
         {
             return EMobDifficulty::IncrediblyEasyPrey;
         }
-
+        */
         return EMobDifficulty::TooWeak;
     }
 

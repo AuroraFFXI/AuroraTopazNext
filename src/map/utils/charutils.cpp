@@ -108,8 +108,8 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 // Number of rows in the exp table
 static constexpr int32                               ExpTableRowCount = 123;
-std::array<std::array<uint16, 99>, ExpTableRowCount> g_ExpTable;
-std::array<uint16, 100>                              g_ExpPerLevel;
+std::array<std::array<uint32, 99>, ExpTableRowCount> g_ExpTable;
+std::array<uint32, 100>                              g_ExpPerLevel;
 
 /************************************************************************
  *                                                                       *
@@ -617,28 +617,28 @@ namespace charutils
         if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
         {
             PChar->MeritMode         = (uint8)Sql_GetIntData(SqlHandle, 0);
-            PChar->jobs.exp[JOB_WAR] = (uint16)Sql_GetIntData(SqlHandle, 1);
-            PChar->jobs.exp[JOB_MNK] = (uint16)Sql_GetIntData(SqlHandle, 2);
-            PChar->jobs.exp[JOB_WHM] = (uint16)Sql_GetIntData(SqlHandle, 3);
-            PChar->jobs.exp[JOB_BLM] = (uint16)Sql_GetIntData(SqlHandle, 4);
-            PChar->jobs.exp[JOB_RDM] = (uint16)Sql_GetIntData(SqlHandle, 5);
-            PChar->jobs.exp[JOB_THF] = (uint16)Sql_GetIntData(SqlHandle, 6);
-            PChar->jobs.exp[JOB_PLD] = (uint16)Sql_GetIntData(SqlHandle, 7);
-            PChar->jobs.exp[JOB_DRK] = (uint16)Sql_GetIntData(SqlHandle, 8);
-            PChar->jobs.exp[JOB_BST] = (uint16)Sql_GetIntData(SqlHandle, 9);
-            PChar->jobs.exp[JOB_BRD] = (uint16)Sql_GetIntData(SqlHandle, 10);
-            PChar->jobs.exp[JOB_RNG] = (uint16)Sql_GetIntData(SqlHandle, 11);
-            PChar->jobs.exp[JOB_SAM] = (uint16)Sql_GetIntData(SqlHandle, 12);
-            PChar->jobs.exp[JOB_NIN] = (uint16)Sql_GetIntData(SqlHandle, 13);
-            PChar->jobs.exp[JOB_DRG] = (uint16)Sql_GetIntData(SqlHandle, 14);
-            PChar->jobs.exp[JOB_SMN] = (uint16)Sql_GetIntData(SqlHandle, 15);
-            PChar->jobs.exp[JOB_BLU] = (uint16)Sql_GetIntData(SqlHandle, 16);
-            PChar->jobs.exp[JOB_COR] = (uint16)Sql_GetIntData(SqlHandle, 17);
-            PChar->jobs.exp[JOB_PUP] = (uint16)Sql_GetIntData(SqlHandle, 18);
-            PChar->jobs.exp[JOB_DNC] = (uint16)Sql_GetIntData(SqlHandle, 19);
-            PChar->jobs.exp[JOB_SCH] = (uint16)Sql_GetIntData(SqlHandle, 20);
-            PChar->jobs.exp[JOB_GEO] = (uint16)Sql_GetIntData(SqlHandle, 21);
-            PChar->jobs.exp[JOB_RUN] = (uint16)Sql_GetIntData(SqlHandle, 22);
+            PChar->jobs.exp[JOB_WAR] = (uint32)Sql_GetIntData(SqlHandle, 1);
+            PChar->jobs.exp[JOB_MNK] = (uint32)Sql_GetIntData(SqlHandle, 2);
+            PChar->jobs.exp[JOB_WHM] = (uint32)Sql_GetIntData(SqlHandle, 3);
+            PChar->jobs.exp[JOB_BLM] = (uint32)Sql_GetIntData(SqlHandle, 4);
+            PChar->jobs.exp[JOB_RDM] = (uint32)Sql_GetIntData(SqlHandle, 5);
+            PChar->jobs.exp[JOB_THF] = (uint32)Sql_GetIntData(SqlHandle, 6);
+            PChar->jobs.exp[JOB_PLD] = (uint32)Sql_GetIntData(SqlHandle, 7);
+            PChar->jobs.exp[JOB_DRK] = (uint32)Sql_GetIntData(SqlHandle, 8);
+            PChar->jobs.exp[JOB_BST] = (uint32)Sql_GetIntData(SqlHandle, 9);
+            PChar->jobs.exp[JOB_BRD] = (uint32)Sql_GetIntData(SqlHandle, 10);
+            PChar->jobs.exp[JOB_RNG] = (uint32)Sql_GetIntData(SqlHandle, 11);
+            PChar->jobs.exp[JOB_SAM] = (uint32)Sql_GetIntData(SqlHandle, 12);
+            PChar->jobs.exp[JOB_NIN] = (uint32)Sql_GetIntData(SqlHandle, 13);
+            PChar->jobs.exp[JOB_DRG] = (uint32)Sql_GetIntData(SqlHandle, 14);
+            PChar->jobs.exp[JOB_SMN] = (uint32)Sql_GetIntData(SqlHandle, 15);
+            PChar->jobs.exp[JOB_BLU] = (uint32)Sql_GetIntData(SqlHandle, 16);
+            PChar->jobs.exp[JOB_COR] = (uint32)Sql_GetIntData(SqlHandle, 17);
+            PChar->jobs.exp[JOB_PUP] = (uint32)Sql_GetIntData(SqlHandle, 18);
+            PChar->jobs.exp[JOB_DNC] = (uint32)Sql_GetIntData(SqlHandle, 19);
+            PChar->jobs.exp[JOB_SCH] = (uint32)Sql_GetIntData(SqlHandle, 20);
+            PChar->jobs.exp[JOB_GEO] = (uint32)Sql_GetIntData(SqlHandle, 21);
+            PChar->jobs.exp[JOB_RUN] = (uint32)Sql_GetIntData(SqlHandle, 22);
             meritPoints              = (uint8)Sql_GetIntData(SqlHandle, 23);
             limitPoints              = (uint16)Sql_GetIntData(SqlHandle, 24);
         }
@@ -3207,7 +3207,7 @@ namespace charutils
             {
                 for (uint32 y = 0; y < 99; ++y)
                 {
-                    g_ExpTable[x][y] = (uint16)Sql_GetIntData(SqlHandle, y);
+                    g_ExpTable[x][y] = (uint32)Sql_GetIntData(SqlHandle, y);
                 }
             }
         }
@@ -3222,7 +3222,7 @@ namespace charutils
 
                 if (level < 100)
                 {
-                    g_ExpPerLevel[level] = (uint16)Sql_GetIntData(SqlHandle, 1);
+                    g_ExpPerLevel[level] = (uint32)Sql_GetIntData(SqlHandle, 1);
                 }
             }
         }
@@ -3257,11 +3257,11 @@ namespace charutils
         {
             return EMobDifficulty::DecentChallenge;
         }
-        if (mobLevelDif >= -10)
+        if (mobLevelDif >= -19)
         {
             return EMobDifficulty::EasyPrey;
         }
-        if (mobLevelDif >= -19)
+        if (mobLevelDif >= -74)
         {
             return EMobDifficulty::IncrediblyEasyPrey;
         }
@@ -3595,6 +3595,7 @@ namespace charutils
                         exp *= monsterbonus;
                     }
 
+                    /*
                     // Per monster caps pulled from: https://ffxiclopedia.fandom.com/wiki/Experience_Points
                     if (PMember->GetMLevel() <= 50)
                     {
@@ -3608,6 +3609,7 @@ namespace charutils
                     {
                         exp = std::fmin(exp, 600.f);
                     }
+                    */
 
                     if (mobCheck > EMobDifficulty::DecentChallenge)
                     {
@@ -3992,7 +3994,7 @@ namespace charutils
         {
             exp = (uint32)(exp * map_config.exp_rate);
         }
-        uint16 currentExp  = PChar->jobs.exp[PChar->GetMJob()];
+        uint32 currentExp  = PChar->jobs.exp[PChar->GetMJob()];
         bool   onLimitMode = false;
 
         // Incase player de-levels to 74 on the field

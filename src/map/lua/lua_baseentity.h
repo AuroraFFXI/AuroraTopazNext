@@ -337,6 +337,7 @@ public:
     int32 delExp(lua_State*); // Subtracts from Character Experience
     int32 getBaseExp(lua_State*);
     int32 getJobExp(lua_State*);
+    int32 getLimitPoints(lua_State*);
     int32 getMerit(lua_State*);
     int32 getMeritCount(lua_State*); // Gets a players current merit count.
     int32 setMerits(lua_State*);     // set merits (testing only!)

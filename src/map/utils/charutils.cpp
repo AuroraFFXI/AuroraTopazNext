@@ -329,7 +329,7 @@ namespace charutils
     void LoadChar(CCharEntity* PChar)
     {
         uint8  meritPoints = 0;
-        uint16 limitPoints = 0;
+        uint32 limitPoints = 0;
         int32  HP          = 0;
         int32  MP          = 0;
 
@@ -640,7 +640,7 @@ namespace charutils
             PChar->jobs.exp[JOB_GEO] = (uint32)Sql_GetIntData(SqlHandle, 21);
             PChar->jobs.exp[JOB_RUN] = (uint32)Sql_GetIntData(SqlHandle, 22);
             meritPoints              = (uint8)Sql_GetIntData(SqlHandle, 23);
-            limitPoints              = (uint16)Sql_GetIntData(SqlHandle, 24);
+            limitPoints              = (uint32)Sql_GetIntData(SqlHandle, 24);
         }
 
         fmtQuery = "SELECT nameflags, mjob, sjob, hp, mp, mhflag, title, bazaar_message, zoning, "
@@ -3257,11 +3257,11 @@ namespace charutils
         {
             return EMobDifficulty::DecentChallenge;
         }
-        if (mobLevelDif >= -19)
+        if (mobLevelDif >= -9)
         {
             return EMobDifficulty::EasyPrey;
         }
-        if (mobLevelDif >= -74)
+        if (mobLevelDif >= -19)
         {
             return EMobDifficulty::IncrediblyEasyPrey;
         }
@@ -3488,24 +3488,11 @@ namespace charutils
             const uint8 memberlevel = PMember->GetMLevel();
 
             EMobDifficulty mobCheck = CheckMob(maxlevel, moblevel);
-            float          exp      = (float)GetRealExp(maxlevel, moblevel);
-
-            if (mobCheck > EMobDifficulty::TooWeak)
+            float          exp      = (float)GetRealExp(memberlevel, (moblevel + memberlevel - maxlevel));
+            if (mobCheck >= EMobDifficulty::TooWeak)
             {
                 if (PMember->getZone() == PMob->getZone())
                 {
-                    if (map_config.exp_party_gap_penalties == 1)
-                    {
-                        if (maxlevel > 50 || maxlevel > (memberlevel + 7))
-                        {
-                            exp *= memberlevel / (float)maxlevel;
-                        }
-                        else
-                        {
-                            exp *= GetExpNEXTLevel(memberlevel) / (float)GetExpNEXTLevel(maxlevel);
-                        }
-                    }
-
                     if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SIGNET) && region >= REGION_TYPE::RONFAURE && region <= REGION_TYPE::JEUNO)
                     {
                         switch (pcinzone)

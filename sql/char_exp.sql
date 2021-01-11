@@ -52,6 +52,6 @@ CREATE TABLE IF NOT EXISTS `char_exp` (
   `geo` int(10) unsigned NOT NULL DEFAULT '0',
   `run` int(10) unsigned NOT NULL DEFAULT '0',
   `merits` tinyint(2) unsigned NOT NULL DEFAULT '0',
-  `limits` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `limits` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`charid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=85;

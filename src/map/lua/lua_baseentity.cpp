@@ -7589,6 +7589,25 @@ inline int32 CLuaBaseEntity::getJobExp(lua_State* L)
 }
 
 /************************************************************************
+ *  Function: getLimitPoints()
+ *  Purpose : Returns the current value of Limit Points
+ *  Example : player:getLimitPoints()
+ *  Notes   : Used only in GM command tnl.lua
+ ************************************************************************/
+
+inline int32 CLuaBaseEntity::getLimitPoints(lua_State* L)
+{
+    TPZ_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    TPZ_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+
+    CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
+
+    lua_pushinteger(L, PChar->PMeritPoints->GetLimitPoints());
+
+    return 1;
+}
+
+/************************************************************************
  *  Function: getMerit()
  *  Purpose : Checks for the existence of a merit and returns the value
  *  Example : caster:getMerit(MERIT_DOTON_EFFECT)

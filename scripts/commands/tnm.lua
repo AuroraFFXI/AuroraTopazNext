@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
--- func: tnl
--- desc: checks the TNL of a player's current job
+-- func: tnm
+-- desc: checks the TNM of a player's current job
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
@@ -11,7 +11,7 @@ cmdprops =
 
 function error(player, msg)
     player:PrintToPlayer(msg)
-    player:PrintToPlayer("!tnl {player}")
+    player:PrintToPlayer("!tnm {player}")
 end
 
 function onTrigger(player, target)
@@ -27,16 +27,15 @@ function onTrigger(player, target)
         end
     end
 
-    local base
-    local exp
-    local tnl
-    local tnlp
+    local merit
+    local limit
+    local tnm
+    local tnmp
 
-    base = targ:getBaseExp()
-    exp = targ:getJobExp()
-    tnl = base - exp
-    tnlp = (exp / base) * 100
+    limit = targ:getLimitPoints()
+    tnm = 2000000000 - limit
+    tnmp = (limit / 2000000000) * 100
 
     -- Print to Player
-    player:PrintToPlayer(string.format("%s is %i TNL! [%i/%i] [%i Percent]", targ:getName(), tnl, exp, base, tnlp))
+    player:PrintToPlayer(string.format("%s is %i TNM! [%i/2000000000] [%i Percent]", targ:getName(), tnm, limit, tnmp))
 end

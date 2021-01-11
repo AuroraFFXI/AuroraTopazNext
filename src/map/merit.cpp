@@ -47,7 +47,7 @@ static uint8 upgrade[10][16] = {
     { 20, 22, 24, 27, 30 },                                    // Weapon Skills
     { 1, 3, 5, 7, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39 }  // Max merits
 };
-#define MAX_LIMIT_POINTS 10000 // количество опыта для получения одного merit
+#define MAX_LIMIT_POINTS 2000000000 // количество опыта для получения одного merit
 
 // TODO: скорее всего придется все это перенести в базу
 
@@ -262,7 +262,7 @@ void CMeritPoints::SaveMeritPoints(uint32 charid)
  *                                                                       *
  ************************************************************************/
 
-uint16 CMeritPoints::GetLimitPoints() const
+uint32 CMeritPoints::GetLimitPoints() const
 {
     return m_LimitPoints;
 }
@@ -286,7 +286,7 @@ uint8 CMeritPoints::GetMeritPoints() const
 
 // true - если merit был добавлен
 
-bool CMeritPoints::AddLimitPoints(uint16 points)
+bool CMeritPoints::AddLimitPoints(uint32 points)
 {
     m_LimitPoints += points;
 
@@ -299,7 +299,7 @@ bool CMeritPoints::AddLimitPoints(uint16 points)
             return false;
         }
 
-        uint8 MeritPoints = std::min(m_MeritPoints + m_LimitPoints / MAX_LIMIT_POINTS, map_config.max_merit_points + GetMeritValue(MERIT_MAX_MERIT, m_PChar));
+        uint8 MeritPoints = std::min<uint8>(m_MeritPoints + m_LimitPoints / MAX_LIMIT_POINTS, map_config.max_merit_points + GetMeritValue(MERIT_MAX_MERIT, m_PChar));
 
         m_LimitPoints = m_LimitPoints % MAX_LIMIT_POINTS;
 
@@ -318,9 +318,9 @@ bool CMeritPoints::AddLimitPoints(uint16 points)
  *                                                                       *
  ************************************************************************/
 
-void CMeritPoints::SetLimitPoints(uint16 points)
+void CMeritPoints::SetLimitPoints(uint32 points)
 {
-    m_LimitPoints = std::min<uint16>(points, MAX_LIMIT_POINTS - 1);
+    m_LimitPoints = std::min<uint32>(points, MAX_LIMIT_POINTS - 1);
 }
 
 /************************************************************************

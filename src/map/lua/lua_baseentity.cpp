@@ -7551,6 +7551,63 @@ inline int32 CLuaBaseEntity::delExp(lua_State* L)
 }
 
 /************************************************************************
+ *  Function: getBaseExp()
+ *  Purpose : Returns the current value of base exp to level
+ *  Example : player:getBaseExp()
+ *  Notes   : Used only in GM command tnl.lua
+ ************************************************************************/
+
+inline int32 CLuaBaseEntity::getBaseExp(lua_State* L)
+{
+    TPZ_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    TPZ_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+
+    CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
+
+    lua_pushinteger(L, charutils::GetExpNEXTLevel(PChar->jobs.job[PChar->GetMJob()]));
+
+    return 1;
+}
+
+/************************************************************************
+ *  Function: getJobExp()
+ *  Purpose : Returns the current value of base exp to level
+ *  Example : player:getBaseExp()
+ *  Notes   : Used only in GM command tnl.lua
+ ************************************************************************/
+
+inline int32 CLuaBaseEntity::getJobExp(lua_State* L)
+{
+    TPZ_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    TPZ_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+
+    CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
+
+    lua_pushinteger(L, PChar->jobs.exp[PChar->GetMJob()]);
+
+    return 1;
+}
+
+/************************************************************************
+ *  Function: getLimitPoints()
+ *  Purpose : Returns the current value of Limit Points
+ *  Example : player:getLimitPoints()
+ *  Notes   : Used only in GM command tnl.lua
+ ************************************************************************/
+
+inline int32 CLuaBaseEntity::getLimitPoints(lua_State* L)
+{
+    TPZ_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    TPZ_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+
+    CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
+
+    lua_pushinteger(L, PChar->PMeritPoints->GetLimitPoints());
+
+    return 1;
+}
+
+/************************************************************************
  *  Function: getMerit()
  *  Purpose : Checks for the existence of a merit and returns the value
  *  Example : caster:getMerit(MERIT_DOTON_EFFECT)
@@ -15628,6 +15685,8 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     // Player Points
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,addExp),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,delExp),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,getBaseExp),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,getJobExp),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getMerit),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getMeritCount),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,setMerits),

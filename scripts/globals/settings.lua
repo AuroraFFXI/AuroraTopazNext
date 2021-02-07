@@ -36,17 +36,17 @@ FOV_REWARD_ALLIANCE = 0 -- Allow Fields of Valor rewards while being a member of
 GOV_REWARD_ALLIANCE = 0 -- Allow Grounds of Valor rewards while being a member of an alliance. (default retail behavior: 1)
 
 -- Records of Eminence
-ENABLE_ROE = 0
-ENABLE_ROE_TIMED = 0 -- Enable 4-hour timed records
+ENABLE_ROE = 1
+ENABLE_ROE_TIMED = 1 -- Enable 4-hour timed records
 
 -- Magian Trials
-ENABLE_MAGIAN_TRIALS = 0
+ENABLE_MAGIAN_TRIALS = 1
 
 -- TREASURE CASKETS
 -- Retail droprate = 0.1 (10%) with no other effects active
 -- Set to 0 to disable caskets.
 -- max is clamped to 1.0 (100%)
-CASKET_DROP_RATE = 0.1
+CASKET_DROP_RATE = 0.05
 
 -- Setting to lock content more accurately to the content you have defined above
 -- This generally results in a more accurate presentation of your selected expansions
@@ -119,7 +119,7 @@ NM_LOTTERY_CHANCE = 1.0
 NM_LOTTERY_COOLDOWN = 1.0
 
 -- DYNAMIS SETTINGS
-BETWEEN_2DYNA_WAIT_TIME  = 72       -- Hours before player can re-enter Dynamis. Default is 1 Earthday (24 hours).
+BETWEEN_2DYNA_WAIT_TIME  = 70       -- Hours before player can re-enter Dynamis. Default is 1 Earthday (24 hours).
 DYNA_MIDNIGHT_RESET      = false     -- If true, makes the wait time count by number of server midnights instead of full 24 hour intervals
 DYNA_LEVEL_MIN           = 65       -- Level min for entering in Dynamis
 TIMELESS_HOURGLASS_COST  = 500000   -- Refund for the timeless hourglass for Dynamis.
@@ -135,7 +135,7 @@ AF2_QUEST_LEVEL = 50    -- Minimum level to start AF2 quest
 AF3_QUEST_LEVEL = 50    -- Minimum level to start AF3 quest
 OLDSCHOOL_G1    = true -- Set to true to require farming Exoray Mold, Bombd Coal, and Ancient Papyrus drops instead of allowing key item method.
 OLDSCHOOL_G2    = true -- Set true to require the NMs for "Atop the Highest Mountains" be dead to get KI like before SE changed it.
-FRIGICITE_TIME  = 30    -- When OLDSCHOOL_G2 is enabled, this is the time (in seconds) you have from killing Boreal NMs to click the "???" target.
+FRIGICITE_TIME  = 300    -- When OLDSCHOOL_G2 is enabled, this is the time (in seconds) you have from killing Boreal NMs to click the "???" target.
 
 -- SPELL SPECIFIC SETTINGS
 DIA_OVERWRITE = 1 -- Set to 1 to allow Bio to overwrite same tier Dia.  Default is 1.
@@ -158,7 +158,7 @@ HALLOWEEN_YEAR_ROUND = 0 -- Set to 1 to have Harvest Festival initialize outside
 
 -- MISC
 HOMEPOINT_HEAL = 0 --Set to 1 if you want Home Points to heal you like in single-player Final Fantasy games.
-RIVERNE_PORTERS = 120 -- Time in seconds that Unstable Displacements in Cape Riverne stay open after trading a scale.
+RIVERNE_PORTERS = 300 -- Time in seconds that Unstable Displacements in Cape Riverne stay open after trading a scale.
 LANTERNS_STAY_LIT = 1200 -- time in seconds that lanterns in the Den of Rancor stay lit.
 ENABLE_COP_ZONE_CAP = 1 -- enable or disable lvl cap
 ALLOW_MULTIPLE_EXP_RINGS = 0 -- Set to 1 to remove ownership restrictions on the Chariot/Empress/Emperor Band trio.

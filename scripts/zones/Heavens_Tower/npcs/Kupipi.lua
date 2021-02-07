@@ -204,7 +204,7 @@ function onEventFinish(player, csid, option)
     elseif csid == 435 then
         player:addSpell(898, true, true)
         player:messageSpecial(ID.text.YOU_LEARNED_TRUST, 0, 898)
-        player:setCharVar("WindurstFirstTrust", 1)
+        player:setCharVar("WindurstFirstTrust", 2)
     elseif csid == 437 then
         player:delKeyItem(tpz.ki.GREEN_INSTITUTE_CARD)
         player:messageSpecial(ID.text.KEYITEM_LOST, tpz.ki.GREEN_INSTITUTE_CARD)

@@ -140,6 +140,11 @@ tpz.trust.canCast = function(caster, spell, not_allowed_trust_ids)
         return -1
     end
 
+    -- Aurora: Trusts can only be summoned in a Battlefield
+    if not caster:hasStatusEffect(254) then
+        return tpz.msg.basic.TRUST_NO_CALL_AE
+    end
+
     -- Check party for trusts
     local num_pt = 0
     local num_trusts = 0

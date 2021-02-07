@@ -75,7 +75,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 13186)
             player:setCharVar("BeatAroundTheBushin", 0)
             player:addFame(NORG, 125)
-            player:tradeComplete()
+            -- player:tradeComplete() -- Aurora: Commented out to keep brown belt for relvling
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.BEAT_AROUND_THE_BUSHIN)
         end
     end

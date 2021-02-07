@@ -934,32 +934,32 @@ tpz.roe.records =
         reward = { sparks = 200, xp = 600 , unity = 20  },
     },
 
-    [  16] = { -- Deal 500+ Damage
+    [  16] = { -- Deal 100+ Damage
         trigger = triggers.dmgDealt,
         goal = 200,
-        reqs = { dmgMin = 500 },
+        reqs = { dmgMin = 100 },
         flags = set{"repeat"},
         reward = { sparks = 1000, xp = 5000, unity = 100 },
     },
 
-    [  17] = { -- Deal 1000+ Damage
+    [  17] = { -- Deal 200+ Damage
         trigger = triggers.dmgDealt,
         goal = 150,
+        reqs = { dmgMin = 200 },
+        reward = { sparks = 1000, xp = 5000 },
+    },
+
+    [  18] = { -- Deal 500+ Damage
+        trigger = triggers.dmgDealt,
+        goal = 100,
+        reqs = { dmgMin = 500 },
+        reward = { sparks = 1000, xp = 5000 },
+    },
+
+    [ 698] = { -- Deal 1000+ Damage
+        trigger = triggers.dmgDealt,
+        goal = 100,
         reqs = { dmgMin = 1000 },
-        reward = { sparks = 1000, xp = 5000 },
-    },
-
-    [  18] = { -- Deal 1500+ Damage
-        trigger = triggers.dmgDealt,
-        goal = 100,
-        reqs = { dmgMin = 1500 },
-        reward = { sparks = 1000, xp = 5000 },
-    },
-
-    [ 698] = { -- Deal 2000+ Damage
-        trigger = triggers.dmgDealt,
-        goal = 100,
-        reqs = { dmgMin = 2000 },
         reward = { sparks = 2000, xp = 5000, item = { {8711, 6} } },
     },
 
@@ -1139,17 +1139,17 @@ tpz.roe.records =
         reward = { sparks = 500, xp = 2500 },
     },
 
-    [ 488] = { -- Heal for 500+ HP
+    [ 488] = { -- Heal for 100+ HP
         trigger = triggers.healAlly,
         goal = 100,
-        reqs = { healMin = 500 },
+        reqs = { healMin = 100 },
         reward = { sparks = 2000, xp = 6000 },
     },
 
-    [ 700] = { -- Heal for 750+ HP
+    [ 700] = { -- Heal for 250+ HP
         trigger = triggers.healAlly,
         goal = 100,
-        reqs = { healMin = 750 },
+        reqs = { healMin = 250 },
         reward = { sparks = 3000, xp = 7000, item = { 6183 } },
     },
 
@@ -1173,7 +1173,7 @@ tpz.roe.records =
         goal = 10,
         reqs = { itemID = set{ 4096 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 20, xp = 1000, unity = 20 },
     },
 
     [  72] = { -- Spoils - Ice Crystals
@@ -1181,7 +1181,7 @@ tpz.roe.records =
         goal = 10,
         reqs = { itemID = set{ 4097 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 20, xp = 1000, unity = 20 },
     },
 
     [  73] = { -- Spoils - Wind Crystals
@@ -1189,7 +1189,7 @@ tpz.roe.records =
         goal = 10,
         reqs = { itemID = set{ 4098 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 20, xp = 1000, unity = 20 },
     },
 
     [  74] = { -- Spoils - Earth Crystals
@@ -1197,7 +1197,7 @@ tpz.roe.records =
         goal = 10,
         reqs = { itemID = set{ 4099 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 20, xp = 1000, unity = 20 },
     },
 
     [  75] = { -- Spoils - Lightning Crystals
@@ -1205,7 +1205,7 @@ tpz.roe.records =
         goal = 10,
         reqs = { itemID = set{ 4100 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 20, xp = 1000, unity = 20 },
     },
 
     [  76] = { -- Spoils - Water Crystals
@@ -1213,7 +1213,7 @@ tpz.roe.records =
         goal = 10,
         reqs = { itemID = set{ 4101 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 20, xp = 1000, unity = 20 },
     },
 
     [  77] = { -- Spoils - Light Crystals
@@ -1221,7 +1221,7 @@ tpz.roe.records =
         goal = 10,
         reqs = { itemID = set{ 4102 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 20, xp = 1000, unity = 20 },
     },
 
     [  78] = { -- Spoils - Dark Crystals
@@ -1229,7 +1229,7 @@ tpz.roe.records =
         goal = 10,
         reqs = { itemID = set{ 4103 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 20, xp = 1000, unity = 20 },
     },
 
     [  84] = { -- Spoils - Flame Geode
@@ -1237,7 +1237,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3297 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 50, xp = 1000, unity = 20 },
     },
 
     [  85] = { -- Spoils - Snow Geode
@@ -1245,7 +1245,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3298 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 50, xp = 1000, unity = 20 },
     },
 
     [  86] = { -- Spoils - Breeze Geode
@@ -1253,7 +1253,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3299 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 50, xp = 1000, unity = 20 },
     },
 
     [  87] = { -- Spoils - Soil Geode
@@ -1261,7 +1261,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3300 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 50, xp = 1000, unity = 20 },
     },
 
     [  88] = { -- Spoils - Thunder Geode
@@ -1269,7 +1269,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3301 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 50, xp = 1000, unity = 20 },
     },
 
     [  89] = { -- Spoils - Aqua Geode
@@ -1277,7 +1277,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3302 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 50, xp = 1000, unity = 20 },
     },
 
     [  90] = { -- Spoils - Light Geode
@@ -1285,7 +1285,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3303 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 50, xp = 1000, unity = 20 },
     },
 
     [  91] = { -- Spoils - Shadow Geode
@@ -1293,7 +1293,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3304 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 50, xp = 1000, unity = 20 },
     },
 
     [  92] = { -- Spoils - Ifritite
@@ -1301,7 +1301,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3520 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 100, xp = 1000, unity = 20 },
     },
 
     [  93] = { -- Spoils - Shivite
@@ -1309,7 +1309,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3521 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 100, xp = 1000, unity = 20 },
     },
 
     [  94] = { -- Spoils - Garudite
@@ -1317,7 +1317,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3522 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 100, xp = 1000, unity = 20 },
     },
 
     [  95] = { -- Spoils - Titanite
@@ -1325,7 +1325,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3523 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 100, xp = 1000, unity = 20 },
     },
 
     [  96] = { -- Spoils - Ramuite
@@ -1333,7 +1333,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3524 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 100, xp = 1000, unity = 20 },
     },
 
     [  97] = { -- Spoils - Leviatite
@@ -1341,7 +1341,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3525 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 100, xp = 1000, unity = 20 },
     },
 
     [  98] = { -- Spoils - Carbite
@@ -1349,7 +1349,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3526 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 100, xp = 1000, unity = 20 },
     },
 
     [  99] = { -- Spoils - Fenrite
@@ -1357,7 +1357,7 @@ tpz.roe.records =
         goal = 3,
         reqs = { itemID = set{ 3527 } },
         flags = set{"repeat"},
-        reward = { sparks = 200, xp = 1000, unity = 20 },
+        reward = { sparks = 100, xp = 1000, unity = 20 },
     },
 
   --------------------------------------------
@@ -1366,7 +1366,7 @@ tpz.roe.records =
 
     [ 120] = { -- Spoils - Bat Wing
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 922 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1374,7 +1374,7 @@ tpz.roe.records =
 
     [ 121] = { -- Spoils - Black Tiger Fang
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 884 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1382,7 +1382,7 @@ tpz.roe.records =
 
     [ 122] = { -- Spoils - Flint Stone
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 768 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1390,7 +1390,7 @@ tpz.roe.records =
 
     [ 123] = { -- Spoils - Rabbit Hide
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 856 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1398,7 +1398,7 @@ tpz.roe.records =
 
     [ 124] = { -- Spoils - Honey
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 4370 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1406,7 +1406,7 @@ tpz.roe.records =
 
     [ 125] = { -- Spoils - Sheepskin
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 505 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1414,7 +1414,7 @@ tpz.roe.records =
 
     [ 126] = { -- Spoils - Lizard Skin
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 852 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1422,7 +1422,7 @@ tpz.roe.records =
 
     [ 127] = { -- Spoils - Beetle Shell
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 889 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1430,7 +1430,7 @@ tpz.roe.records =
 
     [ 128] = { -- Spoils - Zeruhn Soot
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 560 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1446,7 +1446,7 @@ tpz.roe.records =
 
     [ 130] = { -- Spoils - Quadav Helm
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 501 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1454,7 +1454,7 @@ tpz.roe.records =
 
     [ 132] = { -- Spoils - Treant Bulb
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 953 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1462,7 +1462,7 @@ tpz.roe.records =
 
     [ 133] = { -- Spoils - Wild Onion
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 4387 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1470,7 +1470,7 @@ tpz.roe.records =
 
     [ 134] = { -- Spoils - Sleepshroom
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 4374 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1478,7 +1478,7 @@ tpz.roe.records =
 
     [ 135] = { -- Spoils - Sand Bat Fang
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 1015 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1486,7 +1486,7 @@ tpz.roe.records =
 
     [ 136] = { -- Spoils - Zinc Ore
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 642 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1494,7 +1494,7 @@ tpz.roe.records =
 
     [ 137] = { -- Spoils - Giant Bird Feather
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 842 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1518,7 +1518,7 @@ tpz.roe.records =
 
     [ 140] = { -- Spoils - Cornette
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 5,
         reqs = { itemID = set{ 17344 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1542,7 +1542,7 @@ tpz.roe.records =
 
     [ 143] = { -- Spoils - Yagudo Bead Necklace
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 498 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1550,7 +1550,7 @@ tpz.roe.records =
 
     [ 144] = { -- Spoils - Woozyshroom
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 4373 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1558,7 +1558,7 @@ tpz.roe.records =
 
     [ 145] = { -- Spoils - Beehive Chip
         trigger = triggers.itemLooted,
-        goal = 2,
+        goal = 12,
         reqs = { itemID = set{ 912 } },
         flags = set{"repeat"},
         reward = { sparks = 100, xp = 300, unity = 10 },
@@ -1595,7 +1595,7 @@ tpz.roe.records =
     [ 216] = { -- Subjugation: Jaggedy-Eared Jack
         trigger = triggers.mobKill,
         reqs = { mobID = set{17187111} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 217] = { -- Conflict: East Ronfaure
@@ -1609,7 +1609,7 @@ tpz.roe.records =
     [ 218] = { -- Subjugation: Swamfisk
         trigger = triggers.mobKill,
         reqs = { mobID = set{17191189, 17191291} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 219] = { -- Conflict: Ghelsba Outpost
@@ -1623,7 +1623,7 @@ tpz.roe.records =
     [ 220] = { -- Subjugation: Thousandarm Deshglesh
         trigger = triggers.mobKill,
         reqs = { mobID = set{17350826} },
-        reward = { sparks = 250, xp = 550 },
+        reward = { sparks = 1000, xp = 550 },
     },
 
     [ 221] = { -- Conflict: Fort Ghelsba
@@ -1637,7 +1637,7 @@ tpz.roe.records =
     [ 222] = { -- Subjugation: Hundredscar Hajwaj
         trigger = triggers.mobKill,
         reqs = { mobID = set{17354828} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 1000, xp = 1000 },
     },
 
     [ 223] = { -- Conflict: Yughott Grotto
@@ -1651,7 +1651,7 @@ tpz.roe.records =
     [ 224] = { -- Subjugation: Ashmaker Gotblut
         trigger = triggers.mobKill,
         reqs = { mobID = set{17358932} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 225] = { -- Conflict: King Ranperre's Tomb
@@ -1679,7 +1679,7 @@ tpz.roe.records =
     [ 228] = { -- Subjugation: Bloodsucker
         trigger = triggers.mobKill,
         reqs = { mobID = set{17461478} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 250, xp = 1000 },
     },
 
     [ 229] = { -- Conflict: Valkurm Dunes
@@ -1693,7 +1693,7 @@ tpz.roe.records =
     [ 230] = { -- Subjugation: Valkurm Emperor
         trigger = triggers.mobKill,
         reqs = { mobID = set{17199438} },
-        reward = { sparks = 250, xp = 550 },
+        reward = { sparks = 1000, xp = 550 },
     },
 
     [ 231] = { -- Conflict: Konschtat Highlands
@@ -1735,7 +1735,7 @@ tpz.roe.records =
     [ 236] = { -- Subjugation: Bloodtear Baldurf
         trigger = triggers.mobKill,
         reqs = { mobID = set{17195318} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 2500, xp = 1000 },
     },
 
 
@@ -1750,7 +1750,7 @@ tpz.roe.records =
     [ 238] = { -- Subjugation: Morbolger
         trigger = triggers.mobKill,
         reqs = { mobID = set{17568127} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 250, xp = 1000 },
     },
 
   ----------------------------------------
@@ -1768,7 +1768,7 @@ tpz.roe.records =
     [ 240] = { -- Subjugation: King Arthro
         trigger = triggers.mobKill,
         reqs = { mobID = set{17203216} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 2500, xp = 1000 },
     },
 
     [ 241] = { -- Conflict: Batallia Downs
@@ -1782,7 +1782,7 @@ tpz.roe.records =
     [ 242] = { -- Subjugation: Lumber Jack
         trigger = triggers.mobKill,
         reqs = { mobID = set{17207308} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 2500, xp = 1000 },
     },
 
     [ 243] = { -- Conflict: Eldieme Necropolis
@@ -1810,7 +1810,7 @@ tpz.roe.records =
     [ 246] = { -- Subjugation: Hawkeyed Dnatbat
         trigger = triggers.mobKill,
         reqs = { mobID = set{17387567} },
-        reward = { sparks = 250, xp = 600 },
+        reward = { sparks = 1000, xp = 600 },
     },
 
     [ 247] = { -- Conflict: N. Gustaberg
@@ -1824,7 +1824,7 @@ tpz.roe.records =
     [ 248] = { -- Subjugation: Maighdean Uaine
         trigger = triggers.mobKill,
         reqs = { mobID = set{17211702, 17211714} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 249] = { -- Conflict: S. Gustaberg
@@ -1860,7 +1860,7 @@ tpz.roe.records =
     [ 253] = { -- Subjugation: Zi-Ghi Bone-eater
         trigger = triggers.mobKill,
         reqs = { mobID = set{17363208} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 254] = { -- Conflict: Dangruf Wadi
@@ -1874,7 +1874,7 @@ tpz.roe.records =
     [ 255] = { -- Subjugation: Teporingo
         trigger = triggers.mobKill,
         reqs = { mobID = set{17559584} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 256] = { -- Conflict: Pashhow Marshlands
@@ -1888,7 +1888,7 @@ tpz.roe.records =
     [ 257] = { -- Subjugation: Ni'Zho Bladebender
         trigger = triggers.mobKill,
         reqs = { mobID = set{17223797} },
-        reward = { sparks = 250, xp = 700 },
+        reward = { sparks = 1000, xp = 700 },
     },
 
     [ 258] = { -- Conflict: Rolanberry Fields
@@ -1902,7 +1902,7 @@ tpz.roe.records =
     [ 259] = { -- Subjugation: Simurgh
         trigger = triggers.mobKill,
         reqs = { mobID = set{17228242} },
-        reward = { sparks = 250, xp = 1000 },
+        reward = { sparks = 2500, xp = 1000 },
     },
 
     [ 260] = { -- Conflict: Crawler's Nest
@@ -1916,7 +1916,7 @@ tpz.roe.records =
     [ 261] = { -- Subjugation: Demonic Tiphia
         trigger = triggers.mobKill,
         reqs = { mobID = set{17584398} },
-        reward = { sparks = 250, xp = 800 },
+        reward = { sparks = 1000, xp = 800 },
     },
 
     [ 262] = { -- Conflict: Beadeaux
@@ -1930,7 +1930,7 @@ tpz.roe.records =
     [ 263] = { -- Subjugation: Zo'Khu Blackcloud
         trigger = triggers.mobKill,
         reqs = { mobID = set{17379564} },
-        reward = { sparks = 250, xp = 700 },
+        reward = { sparks = 1000, xp = 700 },
     },
 
   ----------------------------------------
@@ -1948,7 +1948,7 @@ tpz.roe.records =
     [ 265] = { -- Subjugation: Nunyenunc
         trigger = triggers.mobKill,
         reqs = { mobID = set{17248517} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 266] = { -- Conflict: East Sarutabaruta
@@ -1962,7 +1962,7 @@ tpz.roe.records =
     [ 267] = { -- Subjugation: Spiny Spipi
         trigger = triggers.mobKill,
         reqs = { mobID = set{17252657} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 268] = { -- Conflict: Giddeus
@@ -1976,7 +1976,7 @@ tpz.roe.records =
     [ 269] = { -- Subjugation: Hoo Mjuu the Torrent
         trigger = triggers.mobKill,
         reqs = { mobID = set{17371515} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 270] = { -- Conflict: Toraimarai Canal
@@ -1990,7 +1990,7 @@ tpz.roe.records =
     [ 271] = { -- Subjugation: Oni Carcass
         trigger = triggers.mobKill,
         reqs = { mobID = set{17469587} },
-        reward = { sparks = 250, xp = 800 },
+        reward = { sparks = 2500, xp = 800 },
     },
 
     [ 272] = { -- Conflict: Inner Horutoto Ruins
@@ -2018,7 +2018,7 @@ tpz.roe.records =
     [ 275] = { -- Subjugation: Bomb King
         trigger = triggers.mobKill,
         reqs = { mobID = set{17572094, 17572142, 17572146} },
-        reward = { sparks = 250, xp = 500 },
+        reward = { sparks = 1000, xp = 500 },
     },
 
     [ 276] = { -- Conflict: Buburimu Peninsula
@@ -2032,7 +2032,7 @@ tpz.roe.records =
     [ 277] = { -- Subjugation: Helldiver
         trigger = triggers.mobKill,
         reqs = { mobID = set{17260907} },
-        reward = { sparks = 250, xp = 600 },
+        reward = { sparks = 1000, xp = 600 },
     },
 
     [ 278] = { -- Conflict: Tahrongi Canyon
@@ -2046,7 +2046,7 @@ tpz.roe.records =
     [ 279] = { -- Subjugation: Serpopard Ishtar
         trigger = triggers.mobKill,
         reqs = { mobID = set{17256563, 17256690} },
-        reward = { sparks = 250, xp = 600 },
+        reward = { sparks = 1000, xp = 600 },
     },
 
     [ 280] = { -- Conflict: Maze of Shakhrami
@@ -2060,7 +2060,7 @@ tpz.roe.records =
     [ 281] = { -- Subjugation: Argus
         trigger = triggers.mobKill,
         reqs = { mobID = set{17588674} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 5000, xp = 1000 },
     },
 
     [ 282] = { -- Conflict: Meriphataud Mountains
@@ -2074,7 +2074,7 @@ tpz.roe.records =
     [ 283] = { -- Subjugation: Daggerclaw Dracos
         trigger = triggers.mobKill,
         reqs = { mobID = set{17264818} },
-        reward = { sparks = 250, xp = 600 },
+        reward = { sparks = 1000, xp = 600 },
     },
 
     [ 284] = { -- Conflict: Sauromugue Champaign
@@ -2088,7 +2088,7 @@ tpz.roe.records =
     [ 285] = { -- Subjugation: Roc
         trigger = triggers.mobKill,
         reqs = { mobID = set{17269106} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 2500, xp = 1000 },
     },
 
     [ 286] = { -- Conflict: Garlaige Citadel
@@ -2102,7 +2102,7 @@ tpz.roe.records =
     [ 287] = { -- Subjugation: Serket
         trigger = triggers.mobKill,
         reqs = { mobID = set{17596720} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 2500, xp = 1000 },
     },
 
     [ 288] = { -- Conflict: Castle Oztroja
@@ -2134,7 +2134,7 @@ tpz.roe.records =
     [ 291] = { -- Subjugation: Nue
         trigger = triggers.mobKill,
         reqs = { mobID = set{17231971} },
-        reward = { sparks = 250, xp = 700 },
+        reward = { sparks = 1000, xp = 700 },
     },
 
     [ 292] = { -- Conflict: Ranguemont Pass
@@ -2148,7 +2148,7 @@ tpz.roe.records =
     [ 293] = { -- Subjugation: Gloom Eye
         trigger = triggers.mobKill,
         reqs = { mobID = set{17457204} },
-        reward = { sparks = 250, xp = 700 },
+        reward = { sparks = 1000, xp = 700 },
     },
 
     [ 294] = { -- Conflict: Fei'Yin
@@ -2162,7 +2162,7 @@ tpz.roe.records =
     [ 295] = { -- Subjugation: Goliath
         trigger = triggers.mobKill,
         reqs = { mobID = set{17613046, 17613048, 17613052, 17613054} },
-        reward = { sparks = 250, xp = 800 },
+        reward = { sparks = 1000, xp = 800 },
     },
 
     [ 296] = { -- Conflict: Xarcabard
@@ -2176,7 +2176,7 @@ tpz.roe.records =
     [ 297] = { -- Subjugation: Biast
         trigger = triggers.mobKill,
         reqs = { mobID = set{17235988} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 2500, xp = 1000 },
     },
 
     [ 298] = { -- Conflict: Castle Zvahl Baileys
@@ -2190,7 +2190,7 @@ tpz.roe.records =
     [ 299] = { -- Subjugation: Duke Haborym
         trigger = triggers.mobKill,
         reqs = { mobID = set{17436923} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 2500, xp = 1000 },
     },
 
     [ 300] = { -- Conflict: Castle Zvahl Keep
@@ -2204,7 +2204,7 @@ tpz.roe.records =
     [ 301] = { -- Subjugation: Baron Vapula
         trigger = triggers.mobKill,
         reqs = { mobID = set{17440963} },
-        reward = { sparks = 250, xp = 800 },
+        reward = { sparks = 1000, xp = 800 },
     },
 
     [ 302] = { -- Conflict: Qufim Island
@@ -2218,7 +2218,7 @@ tpz.roe.records =
     [ 303] = { -- Subjugation: Dosetsu Tree
         trigger = triggers.mobKill,
         reqs = { mobID = set{17293640} },
-        reward = { sparks = 500, xp = 1000 },
+        reward = { sparks = 2500, xp = 1000 },
     },
 
     [ 304] = { -- Conflict: Lower Delkfutt's Tower
@@ -2232,7 +2232,7 @@ tpz.roe.records =
     [ 305] = { -- Subjugation: Epialtes
         trigger = triggers.mobKill,
         reqs = { mobID = set{17530881} },
-        reward = { sparks = 250, xp = 700 },
+        reward = { sparks = 1000, xp = 700 },
     },
 
     [ 306] = { -- Conflict: Middle Delkfutt's Tower
@@ -2246,7 +2246,7 @@ tpz.roe.records =
     [ 307] = { -- Subjugation: Ogygos
         trigger = triggers.mobKill,
         reqs = { mobID = set{17420592} },
-        reward = { sparks = 250, xp = 700 },
+        reward = { sparks = 1000, xp = 700 },
     },
 
     [ 308] = { -- Conflict: Upper Delkfutt's Tower
@@ -2260,7 +2260,7 @@ tpz.roe.records =
     [ 309] = { -- Subjugation: Enkelados
         trigger = triggers.mobKill,
         reqs = { mobID = set{17424385, 17424423} },
-        reward = { sparks = 250, xp = 800 },
+        reward = { sparks = 1000, xp = 800 },
     },
 
     [ 380] = { -- Conflict: Behemoth's Dominion
@@ -3157,22 +3157,22 @@ tpz.roe.records =
         goal = 30,
         reqs = { mobXP = true },
         flags = set{"daily"},
-        reward = { sparks = 100, xp = 500, unity = 300, item = { 8711 } },
+        reward = { sparks = 1000, xp = 500, unity = 300, item = { 8711 } },
     },
 
     [4083] = { -- Buff Allies (D)
         trigger = triggers.buffAlly,
         goal = 20,
         flags = set{"daily"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 500, xp = 1500, unity = 300, item = { 8711 } },
     },
 
-    [4084] = { -- Heal for 500+ HP (D)
+    [4084] = { -- Heal for 100+ HP (D)
         trigger = triggers.healAlly,
         goal = 100,
-        reqs = { healMin = 500 },
+        reqs = { healMin = 100 },
         flags = set{"daily"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 500, xp = 1500, unity = 300, item = { 8711 } },
     },
 
 
@@ -3185,7 +3185,7 @@ tpz.roe.records =
         goal = 20,
         reqs = { mobXP = true, mobSystem = set{tpz.eco.AQUAN} },
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 200, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4009] = {   -- Vanquish Beasts
@@ -3193,7 +3193,7 @@ tpz.roe.records =
         goal = 20,
         reqs = { mobXP = true, mobSystem = set{tpz.eco.BEAST} },
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 200, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4010] = {   -- Vanquish Plantoids
@@ -3201,7 +3201,7 @@ tpz.roe.records =
         goal = 20,
         reqs = { mobXP = true, mobSystem = set{tpz.eco.PLANTOID} },
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 200, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4011] = {   -- Vanquish Lizards
@@ -3209,7 +3209,7 @@ tpz.roe.records =
         goal = 20,
         reqs = { mobXP = true, mobSystem = set{tpz.eco.LIZARD} },
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 200, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4012] = {   -- Vanquish Vermin
@@ -3217,22 +3217,15 @@ tpz.roe.records =
         goal = 20,
         reqs = { mobXP = true, mobSystem = set{tpz.eco.VERMIN} },
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 200, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4013] = { -- Gain Experience
         trigger = triggers.expGain,
-        goal = 5000,
-        increment = 0,
+        goal = 50,
+        increment = 1,
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
-        check = function(self, player, params)
-                if params.exp and params.exp > 0 then
-                    params.progress = params.progress + params.exp
-                    return true
-                end
-                return false
-            end,
+        reward = { sparks = 250, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4014] = {   -- Spoils (Seals)
@@ -3248,7 +3241,7 @@ tpz.roe.records =
         goal = 20,
         reqs = { mobXP = true, mobSystem = set{tpz.eco.BIRD} },
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 200, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4016] = {   -- Vanquish Amorphs
@@ -3264,7 +3257,7 @@ tpz.roe.records =
         goal = 20,
         reqs = { mobXP = true, mobSystem = set{tpz.eco.UNDEAD} },
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 200, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4018] = {   -- Vanquish Arcana
@@ -3272,13 +3265,13 @@ tpz.roe.records =
         goal = 20,
         reqs = { mobXP = true, mobSystem = set{tpz.eco.ARCANA} },
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 200, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4019] = {   -- Crack Treasure Caskets (Triggered from caskets.lua)
         goal = 10,
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 500, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4020] = {  -- Physical Damage Kills
@@ -3286,7 +3279,7 @@ tpz.roe.records =
         goal = 20,
         reqs = { mobXP = true, atkType = tpz.attackType.PHYSICAL },
         flags = set{"timed", "repeat"},
-        reward = { sparks = 300, xp = 1500, unity = 300, item = { 8711 } },
+        reward = { sparks = 200, xp = 1500, unity = 300, item = { 8711 } },
     },
 
     [4021] = {  -- Magic Damage Kills

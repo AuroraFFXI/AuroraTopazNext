@@ -3915,6 +3915,14 @@ namespace charutils
                     // Aurora End Relevel System: Bonus EXP
 
                     // pet or companion exp penalty needs to be added here
+                    if (PMob->PMaster != nullptr)
+                    {
+                        switch (pcinzone)
+                        {
+                            exp *= 0.25;
+                        }
+                    }
+
                     if (distance(PMember->loc.p, PMob->loc.p) > 100)
                     {
                         PMember->pushPacket(new CMessageBasicPacket(PMember, PMember, 0, 0, 37));

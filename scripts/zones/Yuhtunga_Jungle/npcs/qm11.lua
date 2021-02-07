@@ -32,7 +32,7 @@ function onEventFinish(player, csid, option)
         player:addMission(ROV, tpz.mission.id.rov.THE_LOST_AVATAR)
     elseif csid == 213 then
         player:setCharVar("RhapsodiesStatus", 0)
-        npcUtil.giveKeyItem(player, tpz.ki.RHAPSODY_IN_AZURE)
+        -- npcUtil.giveKeyItem(player, tpz.ki.RHAPSODY_IN_AZURE)
         player:completeMission(ROV, tpz.mission.id.rov.THE_LOST_AVATAR)
         player:addMission(ROV, tpz.mission.id.rov.VOLTO_OSCURO)
     end

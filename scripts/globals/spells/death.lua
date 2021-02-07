@@ -18,7 +18,11 @@ function onSpellCast(caster, target, spell)
         spell:setMsg(tpz.msg.basic.MAGIC_NO_EFFECT)
         return 0
     end
+    local typeEffect = tpz.effect.DOOM
 
-    target:setHP(0)
+    spell:setMsg(MobStatusEffectMove(caster, target, typeEffect, 10, 3, 10))
+
+    return typeEffect
+
     return 0
 end

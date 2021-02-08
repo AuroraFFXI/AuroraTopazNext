@@ -3654,25 +3654,25 @@ namespace charutils
                             switch (PMember->expChain.chainNumber)
                             {
                                 case 0:
-                                    exp *= 1.0f;
+                                    exp *= 1.00f;
                                     break;
                                 case 1:
-                                    exp *= 1.2f;
+                                    exp *= 1.15f;
                                     break;
                                 case 2:
-                                    exp *= 1.25f;
+                                    exp *= 1.30f;
                                     break;
                                 case 3:
-                                    exp *= 1.3f;
+                                    exp *= 1.45f;
                                     break;
                                 case 4:
-                                    exp *= 1.4f;
+                                    exp *= 1.60f;
                                     break;
                                 case 5:
-                                    exp *= 1.5f;
+                                    exp *= 1.75f;
                                     break;
                                 default:
-                                    exp *= 1.55f;
+                                    exp *= 2.00f;
                                     break;
                             }
                         }

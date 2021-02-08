@@ -170,9 +170,9 @@ local function dropChance(player)
     --     kupowersMMBPower = kupowerMMBEffect:getPower()
     --end
 
-    if player:hasStatusEffect(tpz.effect.PROWESS_CASKET_RATE) then
-        prowessCasketsPower = casketProwessEffect:getPower()
-    end
+    -- if player:hasStatusEffect(tpz.effect.PROWESS_CASKET_RATE) then
+        -- prowessCasketsPower = casketProwessEffect:getPower()
+    -- end
 
     local rand = math.random()
     if rand < utils.clamp(CASKET_DROP_RATE + kupowersMMBPower + prowessCasketsPower, 0, 1) then
